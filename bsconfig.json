@@ -1,0 +1,32 @@
+{
+  "name": "sudoku",
+  "version": "0.1.0",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "test",
+      "type": "dev",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6-global",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [],
+  "bs-dev-dependencies": [
+    "@godu/bs-ava"
+  ],
+  "bsc-flags": [
+    "-bs-super-errors"
+  ],
+  "warnings": {
+    "number": "@A-40-42",
+    "error": "@A-40-42"
+  },
+  "refmt": 3
+}
