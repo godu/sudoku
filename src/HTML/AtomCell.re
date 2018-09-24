@@ -15,13 +15,26 @@ let string_of_value = (value: value) =>
   | Nine => "9"
   };
 
-let style = ReactDOMRe.Style.make(~textAlign="center", ());
+  let container =
+  ReactDOMRe.Style.make(
+    ~textAlign="center",
+    ~display="grid",
+    ~height="100%",
+    ~fontSize="2em",
+    (),
+  );
+
+let content =
+  ReactDOMRe.Style.make(
+    ~margin="auto",
+    (),
+  );
 
 let make = (~cell, _) => {
   ...component,
   render: _ =>
-    <div style>
-      <span>
+    <div style=container>
+      <span style=content>
         {
           switch (cell) {
           | Value(value) => value |> string_of_value |> ReasonReact.string

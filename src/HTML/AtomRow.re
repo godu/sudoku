@@ -1,6 +1,13 @@
 let component = ReasonReact.statelessComponent("AtomRow");
 
-let rowStyle = ReactDOMRe.Style.make(~display="flex", ~flexDirection="row", ());
+let rowStyle =
+  ReactDOMRe.Style.make(
+    ~display="flex",
+    ~flexDirection="row",
+    ~height="100%",
+    ~width="100%",
+    (),
+  );
 
 let cellStyle = ReactDOMRe.Style.make(~flex="1 1 0", ());
 

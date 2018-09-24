@@ -1,7 +1,13 @@
 let component = ReasonReact.statelessComponent("AtomGrid");
 
 let gridStyle =
-  ReactDOMRe.Style.make(~display="flex", ~flexDirection="column", ());
+  ReactDOMRe.Style.make(
+    ~display="flex",
+    ~flexDirection="column",
+    ~height="100%",
+    ~width="100%",
+    (),
+  );
 
 let rowStyle = ReactDOMRe.Style.make(~flex="auto 1 1", ());
 

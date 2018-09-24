@@ -39,9 +39,11 @@ let randomGrid = (state: State.t): DomainGrid.t => (
   randomRow(state),
 );
 
-let state = State.make([|2|]);
+let state = State.make([|0|]);
 ReactDOMRe.renderToElementWithId(
-  ReasonReact.element(AtomRoot.make(<AtomGrid grid={randomGrid(state)} />)),
+  <AtomRoot>
+    <AtomGrid grid=randomGrid(state)/>
+  </AtomRoot>,
   "index",
 );
 
