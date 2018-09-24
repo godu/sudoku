@@ -1,6 +1,6 @@
 open GoduBsAva.Sync;
-open Cell;
-open Row;
+open DomainCell;
+open DomainRow;
 
 test("equal", t => {
   (Empty, Empty, Empty, Empty, Empty, Empty, Empty, Empty, Empty)

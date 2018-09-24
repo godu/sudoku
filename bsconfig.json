@@ -12,12 +12,15 @@
       "subdirs": true
     }
   ],
+  "reason": {"react-jsx" : 2},
   "package-specs": {
     "module": "es6-global",
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": [],
+  "bs-dependencies": [
+    "reason-react"
+  ],
   "bs-dev-dependencies": [
     "@godu/bs-ava"
   ],

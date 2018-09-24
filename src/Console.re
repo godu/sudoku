@@ -1,5 +1,5 @@
-open Cell;
-let printCell = (cell: Cell.t): string =>
+open DomainCell;
+let printCell = (cell: DomainCell.t): string =>
   switch (cell) {
   | Empty => "."
   | Value(One) => "1"
@@ -13,7 +13,7 @@ let printCell = (cell: Cell.t): string =>
   | Value(Nine) => "9"
   };
 
-let printRow = ((a, b, c, d, e, f, g, h, i): Row.t): string =>
+let printRow = ((a, b, c, d, e, f, g, h, i): DomainRow.t): string =>
   Printf.sprintf(
     "|%s %s %s|%s %s %s|%s %s %s|",
     a |> printCell,
@@ -27,7 +27,7 @@ let printRow = ((a, b, c, d, e, f, g, h, i): Row.t): string =>
     i |> printCell,
   );
 
-let printGrid = ((a, b, c, d, e, f, g, h, i): Grid.t): string =>
+let printGrid = ((a, b, c, d, e, f, g, h, i): DomainGrid.t): string =>
   Printf.sprintf(
     "   1 2 3 4 5 6 7 8 9
   +-----+-----+-----+

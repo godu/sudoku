@@ -1,8 +1,8 @@
-open Cell;
+open DomainCell;
 
 type position = (int, int);
 
-type t = (Row.t, Row.t, Row.t, Row.t, Row.t, Row.t, Row.t, Row.t, Row.t);
+type t = (DomainRow.t, DomainRow.t, DomainRow.t, DomainRow.t, DomainRow.t, DomainRow.t, DomainRow.t, DomainRow.t, DomainRow.t);
 
 let emptyGrid: t = (
   (Empty, Empty, Empty, Empty, Empty, Empty, Empty, Empty, Empty),
@@ -16,7 +16,7 @@ let emptyGrid: t = (
   (Empty, Empty, Empty, Empty, Empty, Empty, Empty, Empty, Empty),
 );
 
-let getCell = (grid: t, position: position): Cell.t =>
+let getCell = (grid: t, position: position): DomainCell.t =>
   switch (position, grid) {
   | ((0, 0), ((cell, _, _, _, _, _, _, _, _), _, _, _, _, _, _, _, _)) => cell
   | ((0, 1), ((_, cell, _, _, _, _, _, _, _), _, _, _, _, _, _, _, _)) => cell
@@ -423,6 +423,6 @@ let isComplete = (grid: t): bool => {
 
   grid
   |. getGroups(groups)
-  |> List.map(Row.isComplete)
+  |> List.map(DomainRow.isComplete)
   |> List.fold_left((&&), true);
 };

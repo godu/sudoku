@@ -1,5 +1,5 @@
 open GoduBsAva.Sync;
-open Cell;
+open DomainCell;
 
 test("toInt", t =>
   [
@@ -28,7 +28,7 @@ test("equal", t => {
 });
 
 test("compare", t => {
-  Cell.compare(Value(Five), Value(Five)) |> t.is(0);
-  Cell.compare(Empty, Value(Five)) |> t.is(-1);
-  Cell.compare(Value(Nine), Value(Five)) |> t.is(1);
+  DomainCell.compare(Value(Five), Value(Five)) |> t.is(0);
+  DomainCell.compare(Empty, Value(Five)) |> t.is(-1);
+  DomainCell.compare(Value(Nine), Value(Five)) |> t.is(1);
 });
